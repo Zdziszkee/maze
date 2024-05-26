@@ -5,7 +5,6 @@ import com.github.zdziszkee.maze.model.MazeCell;
 import javafx.scene.Scene;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -15,7 +14,7 @@ public class DefaultRenderer {
 
     public DefaultRenderer(Maze maze) {
         this.maze = maze;
-        this.rectangles =  new Rectangle[(maze.getRows())][maze.getColumns()];
+        this.rectangles = new Rectangle[(maze.getRows())][maze.getColumns()];
     }
 
     public Scene render() {
@@ -32,7 +31,7 @@ public class DefaultRenderer {
                 Rectangle rectangle = new Rectangle();
                 rectangle.setStroke(Color.BLACK);
                 switch (cells[y][x].getMazeCellType()) {
-                    case PATH ->  rectangle.setFill(Color.WHITE);
+                    case PATH -> rectangle.setFill(Color.WHITE);
                     case EXIT -> rectangle.setFill(Color.RED);
                     case WALL -> rectangle.setFill(Color.BLACK);
                     case ENTRANCE -> rectangle.setFill(Color.LIME);

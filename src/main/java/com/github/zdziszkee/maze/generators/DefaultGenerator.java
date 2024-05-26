@@ -6,7 +6,7 @@ import com.github.zdziszkee.maze.model.MazeCellType;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class DefaultGenerator implements Generator{
+public class DefaultGenerator implements Generator {
 
     @Override
     public void generate(Maze maze) {
@@ -17,11 +17,11 @@ public class DefaultGenerator implements Generator{
             for (int column = 0; column < columns; column++) {
                 int i = ThreadLocalRandom.current().nextInt(0, 3);
                 if (i == 0) {
-                    if(row + 1>=rows)continue;
-                    cells[row+1][column].setMazeCellType(MazeCellType.PATH);
-                }else if (i == 1) {
-                    if(column -1<0)continue;
-                    cells[row][column-1].setMazeCellType(MazeCellType.PATH);
+                    if (row + 1 >= rows) continue;
+                    cells[row + 1][column].setMazeCellType(MazeCellType.PATH);
+                } else if (i == 1) {
+                    if (column - 1 < 0) continue;
+                    cells[row][column - 1].setMazeCellType(MazeCellType.PATH);
                 }
             }
         }

@@ -1,7 +1,5 @@
 package com.github.zdziszkee.maze.model;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 public class Maze {
     private final MazeCell[][] cells;
     private final int rows;

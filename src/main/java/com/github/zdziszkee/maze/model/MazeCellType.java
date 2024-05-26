@@ -4,5 +4,5 @@ public enum MazeCellType {
     WALL,
     PATH,
     EXIT,
-    ENTRANCE;
+    ENTRANCE
 }

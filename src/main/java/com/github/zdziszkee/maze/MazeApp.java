@@ -3,7 +3,6 @@ package com.github.zdziszkee.maze;
 import com.github.zdziszkee.maze.generators.DefaultGenerator;
 import com.github.zdziszkee.maze.model.Maze;
 import com.github.zdziszkee.maze.model.MazeCell;
-import com.github.zdziszkee.maze.model.MazeCellType;
 import com.github.zdziszkee.maze.renderers.DefaultRenderer;
 import com.github.zdziszkee.maze.solver.DeafultSolver;
 import com.github.zdziszkee.maze.solver.Solution;
@@ -17,9 +16,12 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 
-
 public class MazeApp extends Application {
 
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) {
@@ -57,10 +59,6 @@ public class MazeApp extends Application {
         sequentialTransition.play();
         primaryStage.setScene(scene); // Set initial scene size
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
 
