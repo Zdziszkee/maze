@@ -1,6 +1,8 @@
 package com.github.zdziszkee.maze;
 
 import com.github.zdziszkee.maze.generators.DefaultGenerator;
+import com.github.zdziszkee.maze.generators.DepthFirstSearchGenerator;
+import com.github.zdziszkee.maze.generators.Generator;
 import com.github.zdziszkee.maze.model.Maze;
 import com.github.zdziszkee.maze.model.MazeCell;
 import com.github.zdziszkee.maze.renderers.DefaultRenderer;
@@ -25,8 +27,8 @@ public class MazeApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Maze maze = new Maze(20, 20);
-        DefaultGenerator generator = new DefaultGenerator();
+        Maze maze = new Maze(25, 25);
+        Generator generator = new DepthFirstSearchGenerator();
         generator.generate(maze);
         DefaultRenderer defaultRenderer = new DefaultRenderer(maze);
         Scene scene = defaultRenderer.render();
